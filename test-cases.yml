@@ -373,8 +373,7 @@
     const R = require("rambda");
 
     const solution = (width, length) => {
-      return width * length;
-    };
+      return width * length;};
 
     module.exports = solution;
   steps:
@@ -405,8 +404,7 @@
     const R = require("rambda");
 
     const solution = (width, length) => {
-      return width * length;
-    };
+      return width * length;};
 
     module.exports = solution;
   steps:
@@ -437,8 +435,7 @@
     const R = require("rambda");
 
     const solution = (width, length) => {
-      return width * length;
-    };
+      return width * length;};
 
     module.exports = solution;
   steps:
@@ -468,8 +465,7 @@
     const R = require("rambda");
 
     const solution = (width, length) => {
-      return width * length;
-    };
+      return width * length;};
 
     module.exports = solution;
   steps:
@@ -1283,4 +1279,3 @@
     - Нажать кнопку « Sign out »
   expected-result: 
     Осуществляется выход из аккаунта пользователя «v.mozaykin», отображена главная страница
-
