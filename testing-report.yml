@@ -150,7 +150,7 @@
 
 - summary: 
     Проверка изменения громкости и звуков в системе оповещения
-  status: fail
+  status: pass
 
 
 - summary: 
