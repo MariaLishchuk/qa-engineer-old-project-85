@@ -1,98 +1,97 @@
-- summary: 
-    Проверка работы таймера
-  requirement: 
-    При запуске игры в комнате отображается таймер, показывающий сколько осталось времени на выполнение задания
-  prerequisites: 
-    ПК
+- summary:
+    Checking the timer operation
+  requirement:
+    When the game starts, a timer is displayed in the room, showing how much time is left to complete the task
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Установить бегунок «Time control» на 15 минут
-    - Нажать кнопку «Create battle»
-  expected-result: 
-    В комнате отображается таймер с обратным отсчетом стартующий с 15 минут
+    - Press the "Create a game" button 
+    - Press the "With a bot" button 
+    - Set the "Time control" slider for 15 minutes
+    - Click the "Create battle"
+  expected-result button:
+    A countdown timer is displayed in the room starting from 15 minutes
 
-
-- summary: 
-    Проверка выбора уровня сложности заданий
-  requirement: 
-    При выборе уровня сложности в настройках игры задания меняются на соответствующие по сложности
-  prerequisites: 
-    ПК
+- summary:
+    Checking the selection of the difficulty level of tasks
+  requirement:
+    When selecting the difficulty level in the game settings, the tasks change to the corresponding difficulty
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
+    Authorization under the user "v.mozaykin"
   test-data: 
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «Hard»
-    - Нажать кнопку «Стрелка вниз» в окне «Choose task by name or tags» 
-  expected-result: 
-    В выпадающем меню отображены более сложные задания
+    - Click the "Create a game" button 
+    - Click the "Hard" button 
+    - Click the "Down Arrow" button in the "Choose task by name or tags"
+  expected-result window:
+    More complex tasks are displayed in the drop-down menu
 
 
-- summary: 
-    Проверка выбора задачи для решения
-  requirement: 
-    При выборе конкретной задачи в настройках игры запускается игра по решению данной задачи
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
-    codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+- summary:
+    Checking the selection of the task to solve
+  requirement:
+    When selecting a specific task in the game settings, the game starts to solve this problem
+  prerequisites:
+    PC
+    Yandex.Browser
+    code battle.hexlet.io
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Выбрать значение «rect_area» в выпадающем меню «Choose task by name or tags»
-    - Нажать кнопку «Create battle»
-  expected-result: 
-    Начинается игра по решению задачи «rect_area»
+    - Click "Create a game"
+    - Click "With a bot"
+    - Select the value "rect_area" in the drop-down menu "Choose task by name or tags"
+    - Click "Create battle"
+  expected-result:
+    The game begins by solving the problem "rect_area"
 
 
-- summary: 
-    Проверка изменения языка задачи в игре
-  requirement: 
-    При выборе русского языка в выпадающем меню условия задачи отображаются на русском
-  prerequisites: 
-    ПК
+- summary:
+    Checking the language change of the task in the game
+  Russian Russian:
+    When selecting the Russian language in the drop-down menu, the task conditions are displayed in Russian
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Нажать кнопку «Create battle»
-    - Нажать выбрать значение «RU» в выпадающем меню
-  expected-result: 
-    Условия задачи отображаются на русском языке
+    - Click "Create a game"
+    - Click "With a bot"
+    - Click "Create battle"
+    - Click select the value "RU" in the drop-down menu
+  expected-result:
+    The task conditions are displayed in Russian
 
 
-- summary: 
-    Проверка оповещения об истечении времени на выполнение задания
-  requirement: 
-    При истечении времени на выполнение задания, в случае если оба соревнующихся пользователя не успели ввести решение, отображается окно «Timeout»
-  prerequisites: 
-    ПК
+- summary:
+    Checking the notification about the expiration of the time to complete the task
+  requirement:
+    When the time for completing the task expires, if both competing users did not have time to enter a solution, the "Timeout"
+  prerequisites:
+    PC window is displayed
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin» c одного устройства
-    Авторизация под пользователем «VMozaykin» c другого устройства
-  test-data: 
-    v.mozaykin    
+    Authorization under the user "v.mozaykin" from one device
+    Authorization under the user "VMozaykin" from another device
+  test-data:
+    v.mozaykin
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
     VMozaykin
@@ -100,29 +99,29 @@
     Password = v.mozaykin583
     Choose opponent = VMozaykin
   steps:
-   - С аккаунта «v.mozaykin» нажать кнопку «Create a game»
-    - Нажать кнопку «With a friend»
-    - Ввести значение в окне «Choose opponent»
-    - Нажать кнопку «Create battle»
-    - С аккаунта «VMozaykin» нажать кнопку с перекрещенными мечами
-    - Нажать кнопку «Accept»
-    - Подождать, пока время на таймере истечет, не вводя решение ни с одного аккаунта
-  expected-result: 
-    У обоих пользователей отображено окно «Timeout. There is no winners in this game»
+    - From the "v.mozaykin" account, click "Create a game"
+    - Click "With a friend"
+    - Enter a value in the "Choose opponent" window 
+    - Click "Create battle"
+    - From the "VMozaykin" account, click the button with crossed swords
+    - Press the "Accept" button 
+    - Wait until the time on the timer expires without entering a solution from any account
+  expected-result:
+    Both users have the window "Timeout. There is no winners in this game»
 
 
-- summary: 
-    Проверка выбора задачи для решения при игре с другом
-  requirement: 
-    При выборе конкретной задачи в настройках игры с другом запускается игра по решению данной задачи
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+- summary:
+    Checking the choice of a task to solve when playing with a friend
+  requirement:
+    When selecting a specific task in the game settings with a friend, a game is launched to solve this problem
+  prerequisites:
+    PC
+    Yandex.Browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin» c одного устройства
-    Авторизация под пользователем «VMozaykin» c другого устройства
-  test-data: 
-    v.mozaykin    
+    Authorization under the user "v.mozaykin" from one device
+    Authorization under the user "VMozaykin" from another device
+  test-data:
+    v.mozaykin
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
     VMozaykin
@@ -130,171 +129,170 @@
     Password = v.mozaykin583
     Choose opponent = VMozaykin
   steps:
-   - С аккаунта «v.mozaykin» нажать кнопку «Create a game»
-    - Нажать кнопку «With a friend»
-    - Ввести значение в окне «Choose opponent»
-    - Выбрать значение «rect_area» в выпадающем меню «Choose task by name or tags»
-    - Нажать кнопку «Create battle»
-    - С аккаунта «VMozaykin» нажать кнопку с перекрещенными мечами
-    - Нажать кнопку «Accept»
-  expected-result: 
-    Начинается игра по решению задачи «rect_area»
+    - From the account "v.mozaykin" click "Create a game"
+    - Click "With a friend"
+    - Enter the value in the "Choose opponent" window 
+    - Select the value "rect_area" in the drop-down menu "Choose task by name or tags"
+    - Click "Create battle"
+    - From the account "VMozaykin" push the button with crossed swords
+    - Press the "Accept"
+  button expected-result:
+    The game begins to solve the problem "rect_area"
 
 
-- summary: 
-    Проверка изменения языка в игре с ботом
-  requirement: 
-    При выборе конкретной задачи в настройках игры с другом запускается игра по решению данной задачи
-  prerequisites: 
+- summary:
+    Checking the language change in the game with the bot
+  requirement:
+    When you select a specific task in the settings of the game with a friend, the game starts to solve this problem
+  prerequisites:
     iPhone
     Safari
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Нажать кнопку «Create battle»
-    - В выпадающем меню с языками программирования установить значение «Python 3.10.6»
-  expected-result: 
-    Язык в окне решения задачи меняется на Python 3.10.6
+    - Click "Create a game"
+    - Click "With a bot"
+    - Click "Create battle"
+    - In the drop-down menu with programming languages set the value "Python 3.10.6"
+  expected-result:
+    The language in the task solution window changes to Python 3.10.6
 
-
-- summary: 
-    Проверка возможности соревноваться с ботом
-  requirement: 
-    При выборе «With a bot» при запуске игры пользователь соревнуется с ботом
-  prerequisites: 
-    ПК
+- summary:
+    Checking the ability to compete with a bot
+  requirement:
+    When selecting "With a bot" when starting the game, the user competes with the bot
+  prerequisites:
+    PC
     Google Chrome
-    codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    code battle.hexlet.io
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Нажать кнопку «Create battle»
-  expected-result: 
-    Начинается игра с ботом
+    - Click "Create a game"
+    - Click "With a bot"
+    - Click "Create battle"
+  expected-result:
+    The game starts with a bot
 
 
-- summary: 
-    Проверка возможности соревноваться с другим пользователем
-  requirement: 
-    При выборе «With other users» при запуске игры пользователь соревнуется с другим пользователем
-  prerequisites: 
-    ПК
+- summary:
+    Checking the ability to compete with another user
+  requirement:
+    When selecting "With other users" when starting the game, the user competes with another user
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With other users»
-    - Нажать кнопку «Create battle»
-  expected-result: 
-    Начинается игра с другим пользователем
+    - Click "Create a game"
+    - Click "With other users"
+    - Click "Create battle"
+  expected-result:
+    The game starts with another user
 
 
-- summary: 
-    Проверка возможности подключиться к игре, созданной другим пользователем
-  requirement: 
-    При нажатии кнопки «Fight» в лобби пользователь подключается к игре, созданной другим пользователем
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+- summary:
+    Checking the ability to connect to a game created by another user
+  requirement:
+    When pressing the "Fight" button in the lobby, the user connects to a game created by another user
+  prerequisites:
+    PC
+    Yandex.Browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-    В лобби отображена игра, созданная пользователем VMozaykin
-  test-data: 
+    Authorization under the user "v.mozaykin"
+    The game created by the VMozaykin user is displayed in the lobby
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Fight» в игре созданной пользователем VMozaykin
-  expected-result: 
-    Начинается игра с пользователем, создавшим игру
+    - Press the "Fight" button in the game created by the VMozaykin user
+  expected-result:
+    The game starts with the user who created the game
 
 
-- summary: 
-    Проверка приглашения друга в игру
-  requirement: 
-    При выборе «With a friend» при запуске игры пользователь соревнуется с приглашенным пользователем
-  prerequisites: 
-    ПК
+- summary:
+    Checking a friend's invitation to the game
+  requirement:
+    When selecting "With a friend" when starting the game, the user competes with the invited user
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
     Choose opponent = VMozaykin
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a friend»
-    - Ввести значение в окне «Choose opponent»
-    - Нажать кнопку «Create battle»
-  expected-result: 
-    Начинается игра с приглашенным пользователем
+    - Click "Create a game"
+    - Click "With a friend"
+    - Enter a value in the "Choose opponent" window
+    - Click "Create battle"
+  expected-result:
+    The game starts with an invited user
 
 
-- summary: 
-    Проверка подключения к игре по приглашению друга
-  requirement: 
-    При нажатии «Accept» в приглашении вступить в игру начинается игра с пользователем, который выслал приглашение 
-  prerequisites: 
-    ПК
+- summary:
+    Checking the connection to the game at the invitation of a friend
+  requirement:
+    When you click "Accept" in the invitation to join the game, the game starts with the user who sent the invitation
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-    Приглашение в игру от пользователя VMozaykin
-  test-data: 
+    Authorization under the user "v.mozaykin"
+    Invitation to the game from the user VMozaykin
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку с перекрещенными мечами
-    - Нажать кнопку «Accept»
-  expected-result: 
-    Начинается игра с пользователем, от которого поступило приглашение
+    - Press the button with crossed swords
+    - Press the "Accept"
+  expected-result button:
+    The game starts with the user from whom the invitation was received
 
 
-- summary: 
-    Проверка возможности отклонить приглашение пользователя вступить в игру
-  requirement: 
-    При нажатии «Decline» в приглашении вступить в игру приглашение аннулируется 
-  prerequisites: 
-    ПК
+- summary:
+    Checking the possibility to reject the user's invitation to join the game
+  requirement:
+    When you click "Decline" in the invitation to join the game, the invitation is canceled
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-    Приглашение в игру от пользователя VMozaykin
-  test-data: 
+    Authorization under the user "v.mozaykin"
+    Invitation to the game from the user VMozaykin
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку с перекрещенными мечами
-    - Нажать кнопку «Decline»
-  expected-result: 
-    Приглашение аннулируется и больше не отображается в списке приглашений
+    - Press the button with crossed swords
+    - Press the button "Decline"
+  expected-result:
+    The invitation is cancelled and no longer appears in the invitation list
 
 
-- summary: 
-    Проверка получения отклонения приглашения вступить в игру пользователем
-  requirement: 
-    При отклонении пользователем приглашения вступить в игру отображается оповещение, что пользователь отклонил приглашение  
-  prerequisites: 
+- summary:
+    Verification of receipt of rejection of the invitation to join the game by the user
+  requirement:
+    When a user rejects an invitation to join the game, a notification is displayed that the user declined the invitation
+  prerequisites:
     iPad
     Safari
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin» c одного устройства
-    Авторизация под пользователем «VMozaykin» c другого устройства
-  test-data: 
-    v.mozaykin    
+    Authorization under the user "v.mozaykin" from one device
+    Authorization under the user "VMozaykin" from another device
+  test-data:
+    v.mozaykin
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
     VMozaykin
@@ -302,16 +300,15 @@
     Password = v.mozaykin583
     Choose opponent = VMozaykin
   steps:
-   - С аккаунта «v.mozaykin» нажать кнопку «Create a game»
-    - Нажать кнопку «With a friend»
-    - Ввести значение в окне «Choose opponent»
-    - Выбрать значение «rect_area» в выпадающем меню «Choose task by name or tags»
-    - Нажать кнопку «Create battle»
-    - С аккаунта «VMozaykin» нажать кнопку с перекрещенными мечами
-    - Нажать кнопку «Decline»
-  expected-result: 
-    У пользователя «v.mozaykin» отображается оповещение «invitation has been declined»
-
+    - From the account "v.mozaykin" click "Create a game"
+    - Click "With a friend"
+    - Enter the value in the "Choose opponent" window 
+    - Select the value "rect_area" in the drop-down menu "Choose task by name or tags"
+    - Click "Create battle"
+    - From the account "VMozaykin" push the button with crossed swords
+    - Click the "Decline"
+  button expected-result:
+    The user "v.mozaykin" displays an alert "invitation has been declined"
 
 - summary: 
     Проверка возможности наблюдения за написанием кода противником
