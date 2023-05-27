@@ -310,155 +310,93 @@
   button expected-result:
     The user "v.mozaykin" displays an alert "invitation has been declined"
 
-- summary: 
-    Проверка возможности наблюдения за написанием кода противником
-  requirement: 
-    При игре с пользователем в окне решения задачи противника отображается процесс написания им кода
-  prerequisites: 
+- summary:
+    Checking the possibility of observing the writing of code by the enemy
+  requirement:
+    When playing with a user, the opponent's task solution window displays the process of writing code by him
+  prerequisites:
     Nokia 5.4
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With other users»
-    - Нажать кнопку «Create battle»
-    - Смотреть на происходящее в окне решения задачи противника
-  expected-result: 
-    В окне решения задачи противника отображается процесс написания им кода
+    - Press the "Create a game" button     
+    - Click the "With other users" button
+    - Press the "Create battle" button
+    - Look at what is happening in the window for solving the problem of the enemy
+  expected result:
+    In the window for solving the enemy's problem, the process of writing code is displayed
 
 
-- summary: 
-    Проверка возможности сдаться в игре
-  requirement: 
-    При нажатии кнопки «Give up» в игре засчитывается поражение
-  prerequisites: 
+- summary:
+     Checking if you can surrender in a game
+  requirement:
+     When you press the "Give up" button in the game, a defeat is counted
+  prerequisites:
     iPhone
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Нажать кнопку «Create battle»
-    - Нажать кнопку «Give up»
-    - Подтвердить действие «Give up»
-  expected-result: 
-    В игре засчитывается поражение, отображается окно с текстом «If you read this you've lost the game»
+    - Press the "Create a game" button
+    - Press the "With a bot" button
+    - Press the "Create battle" button
+    - Press the "Give up" button
+    - Confirm "Give up" action
+  expected result:
+    The game is counted as a defeat, a window is displayed with the text "If you read this you've lost the game"
 
 
-- summary: 
-    Проверка возможности сбросить решение в игре
-  requirement: 
-    При нажатии кнопки «Reset editor» в игре введенное ранее решение сбрасывается
-  prerequisites: 
-    ПК
-    Microsoft Edge
-    codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
-    Email = v.mozaykin@gmail.com
-    Password = VMozaykin583
-    Solution =
-    const _ = require("lodash");
-    const R = require("rambda");
-
-    const solution = (width, length) => {
-      return width * length;};
-
-    module.exports = solution;
-  steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Выбрать значение «rect_area» в выпадающем меню «Choose task by name or tags»
-    - Нажать кнопку «Create battle»
-    - Вставить код в окно для решения
-    - Нажать кнопку «Reset editor»
-  expected-result: 
-    В окне решения задачи сбрасывается введенное ранее решение
-
-
-- summary: 
-    Проверка системы авто-тестов при правильном решении в игре
-  requirement: 
-    При нажатии кнопки «Check solution» в игре запускается система авто-тестов, при прохождении авто-тестов отображается окно с текстом «Woohoo, you're Champion!!!!!», засчитывается победа
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
-    codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
-    Email = v.mozaykin@gmail.com
-    Password = VMozaykin583
-    Solution =
-    const _ = require("lodash");
-    const R = require("rambda");
-
-    const solution = (width, length) => {
-      return width * length;};
-
-    module.exports = solution;
-  steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Выбрать значение «rect_area» в выпадающем меню «Choose task by name or tags»
-    - Нажать кнопку «Create battle»
-    - Вставить код в окно для решения
-    - Нажать кнопку «Check solution»
-  expected-result: 
-    Отображается окно с текстом «Woohoo, you're Champion!!!!!», засчитывается победа
-
-
-- summary: 
-    Проверка системы авто-тестов при неправильном решении в игре
-  requirement: 
-    При нажатии кнопки «Check solution» в игре запускается система авто-тестов, при провале авто-тестов отображается сообщение с текстом «Test failed», решение не засчитывается
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
-    codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
-    Email = v.mozaykin@gmail.com
-    Password = VMozaykin583
-    Solution =
-    const _ = require("lodash");
-    const R = require("rambda");
-
-    const solution = (width, length) => {
-      return width * length;};
-
-    module.exports = solution;
-  steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Выбрать значение «boom» в выпадающем меню «Choose task by name or tags»
-    - Нажать кнопку «Create battle»
-    - Вставить код в окно для решения
-    - Нажать кнопку «Check solution»
-  expected-result: 
-    Отображается сообщение с текстом «Test failed», решение не засчитывается
-
-
-- summary: 
-    Проверка получения очков в случае победы
-  requirement: 
-    При игре с пользователем или другом в случае победы количество очков увеличивается  
+- summary:
+    Checking the ability to reset the decision in the game
+  requirement:
+    When you press the "Reset editor" button in the game, the previously entered solution is reset
   prerequisites:
-    ПК
-    Google Chrome
+    PC
+    Microsoft Edge     
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
-    Solution =
+    solution=
+    const _ = require("lodash");
+    const R = require("rambda");
+    
+    const solution = (width, length) => {
+    return width * length;};
+
+    module.exports = solution;
+  steps:
+    - Press the "Create a game" button
+    - Press the "With a bot" button
+    - Select the value "rect_area" in the drop-down menu "Choose task by name or tags"
+    - Press the "Create battle" button
+    - Paste code into solution box
+    - Press the "Reset editor" button
+  expected result:
+    The previously entered solution is reset in the problem solution window
+
+
+- summary:
+    Checking the system of auto-tests with the correct decision in the game
+  requirement:
+    When you press the "Check solution" button in the game, the system of auto-tests is launched, when auto-tests are passed, a window with the text "Woohoo, you're Champion!!!!!" is displayed, a victory is counted
+  prerequisites:
+    PC
+    Yandex browser
+    codebattle.hexlet.io
+    Authorization under the user "v.mozaykin"
+  test-data:
+    Email = v.mozaykin@gmail.com
+    Password = VMozaykin583
+    solution=
     const _ = require("lodash");
     const R = require("rambda");
 
@@ -467,244 +405,306 @@
 
     module.exports = solution;
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With other users»
-    - Выбрать значение «rect_area» в выпадающем меню «Choose task by name or tags»
-    - Нажать кнопку «Create battle»
-    - Вставить код в окно для решения
-    - Нажать кнопку «Check solution»
-  expected-result: 
-    Показатель «Score» увеличился
+    - Press the "Create a game" button
+    - Press the "With a bot" button
+    - Select the value "rect_area" in the drop-down menu "Choose task by name or tags"
+    - Press the "Create battle" button
+    - Paste code into solution box
+    - Press the "Check solution" button
+  expected result:
+    A window with the text "Woohoo, you're Champion!!!!!" is displayed, a victory is counted
 
 
-- summary: 
-    Проверка возможности наблюдения за игрой других пользователей
-  requirement: 
-    При нажатии кнопки «Show» в лобби отображается прямая трансляция игры других пользователей
-  prerequisites: 
-    Nokia 5.4
-    Яндекс.Браузер
+- summary:
+    Checking the system of auto-tests in case of a wrong decision in the game
+  requirement:
+    When you press the "Check solution" button, the system of auto-tests is launched in the game, if the auto-tests fail, a message with the text "Test failed" is displayed, the solution is not counted
+  prerequisites:
+    PC
+    Yandex browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
+    solution=
+    const _ = require("lodash");
+    const R = require("rambda");
+
+    const solution = (width, length) => {
+      return width * length;};
+
+    module.exports = solution;
   steps:
-    - Нажать кнопку «Show» в лобби
-  expected-result: 
-    Отображена прямая трансляция игры других пользователей
+    - Press the "Create a game" button
+    - Press the "With a bot" button
+    - Select the value "boom" in the drop-down menu "Choose task by name or tags"
+    - Press the "Create battle" button
+    - Paste code into solution box
+    - Press the "Check solution" button
+  expected result:
+    A message is displayed with the text "Test failed", the solution does not count
 
 
-- summary: 
-    Проверка возможности у наблюдателя игры отправлять сообщения в чате 
-  requirement: 
-    При отправке сообщений в чат наблюдателем игры они отображаются в истории сообщений
-  prerequisites: 
-    ПК
+- summary:
+    Checking for points in case of victory
+  requirement:
+    When playing with a user or friend, in case of victory, the number of points increases
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
+    Email = v.mozaykin@gmail.com
+    Password = VMozaykin583
+    solution=
+    const _ = require("lodash");
+    const R = require("rambda");
+
+    const solution = (width, length) => {
+      return width * length;};
+
+    module.exports = solution;
+  steps:
+    - Press the "Create a game" button
+    - Click the "With other users" button
+    - Select the value "rect_area" in the drop-down menu "Choose task by name or tags"
+    - Press the "Create battle" button
+    - Paste code into solution box
+    - Press the "Check solution" button
+  expected result:
+    Score increased
+
+
+- summary:
+    Checking the ability to observe the game of other users
+  requirement:
+    Pressing the "Show" button in the lobby displays a live broadcast of the game of other users
+  prerequisites:
+    Nokia 5.4
+    Yandex browser
+    codebattle.hexlet.io
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Show» в лобби
-    - Ввести текст «Hello, world!» в поле ввода сообщения
-    - Нажать кнопку «Send»
-  expected-result: 
-    В чате отображено отправленное сообщение «Hello, world!»
+    - Press the "Show" button in the lobby
+  expected result:
+    Other users' live game is displayed
 
 
-- summary: 
-    Проверка возможности у участника игры отправлять сообщения в чате 
-  requirement: 
-    При отправке участником игры сообщений в чат они отображаются в истории сообщений
-  prerequisites: 
-    ПК
-    Microsoft Edge
+- summary:
+    Checking the ability of the game observer to send messages in the chat
+  requirement:
+    When messages are sent to the chat by a game observer, they are displayed in the message history
+  prerequisites:
+    PC
+    Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With other users»
-    - Нажать кнопку «Create battle»
-    - Ввести текст «Hello, world!» в поле ввода сообщения
-    - Нажать кнопку «Send»
-  expected-result: 
-    В чате отображено отправленное сообщение «Hello, world!»
+    - Press the "Show" button in the lobby
+    - Enter the text "Hello, world!" in the message input field
+    - Press the "Send" button
+  expected result:
+    The chat shows the sent message "Hello, world!"
 
 
-- summary: 
-    Проверка регистрации на сайте с помощью электронной почты
-  requirement: 
-    При заполнении пользователем формы «Sign up» создается новый аккаунт
-  prerequisites: 
-    ПК
+- summary:
+    Checking the ability of a game participant to send messages in a chat
+  requirement:
+    When a player sends messages to the chat, they are displayed in the message history
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
+    Email = v.mozaykin@gmail.com
+    Password = VMozaykin583
+  steps:
+    - Press the "Create a game" button
+    - Click the "With other users" button
+    - Press the "Create battle" button
+    - Enter the text "Hello, world!" in the message input field
+    - Press the "Send" button
+  expected result:
+    The chat shows the sent message "Hello, world!"
+
+
+- summary:
+    Checking registration on the site using e-mail
+  requirement:
+    When a user fills out the "Sign up" form, a new account is created
+  prerequisites:
+    PC
+    Microsoft Edge
+    codebattle.hexlet.io
+  test-data:
     Nickname = v.mozaykin
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Sign up»
-    - Ввести значение в поле «Nickname»
-    - Ввести значение в поле «Email»
-    - Ввести значение в поле «Password»
-    - Ввести значение во второе поле «Password»
-    - Нажать кнопку «Submit»
-  expected-result: 
-    Пользователь должен попасть в лобби
+    - Press the "Sign up" button
+    - Enter a value in the "Nickname" field
+    - Enter a value in the "Email" field
+    - Enter a value in the "Password" field
+    - Enter a value in the second field "Password"
+    - Press the "Submit" button
+  expected result:
+    The user must enter the lobby
 
 
-- summary: 
-    Проверка регистрации на сайте с помощью неверной электронной почты
-  requirement: 
-    При введении некорректного адреса электронной почты отображается оповещение о некорректном адресе электронной почты, аккаунт не регистрируется
-  prerequisites: 
-    ПК
+- summary:
+    Checking registration on the site using the wrong email
+  requirement:
+    If an invalid email address is entered, an invalid email notification is displayed and the account is not registered
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-  test-data: 
+  test-data:
     Nickname = VasiliyM
     Email = v.mozaykin@gmail.ru
     Password = v.mozaykin123
   steps:
-    - Нажать кнопку «Sign up»
-    - Ввести значение в поле «Nickname»
-    - Ввести значение в поле «Email»
-    - Ввести значение в поле «Password»
-    - Ввести значение во второе поле «Password»
-    - Нажать кнопку «Submit»
-  expected-result: 
-    Отображается оповещение о некорректном адресе электронной почты, аккаунт не регистрируется
+    - Press the "Sign up" button
+    - Enter a value in the "Nickname" field
+    - Enter a value in the "Email" field
+    - Enter a value in the "Password" field
+    - Enter a value in the second field "Password"
+    - Press the "Submit" button
+  expected result:
+    Invalid email alert displayed, account not registering
 
 
-- summary: 
-    Проверка авторизации на сайте через аккаунт на Github
-  requirement: 
-    При авторизации на сайте через аккаунт на Github пользователь попадает в лобби
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+- summary:
+    Checking authorization on the site through an account on Github
+  requirement:
+    When authorizing on the site through an account on Github, the user enters the lobby
+  prerequisites:
+    PC
+    Yandex browser
     codebattle.hexlet.io
-  test-data: 
+  test-data:
     Username = VMozaykin
     Password = v.mozaykin583
   steps:
-    - Нажать кнопку «Sign up»
-    - Нажать кнопку «Sign in with Github»
-    - Ввести значение в поле «Username or email address»
-    - Ввести значение в поле «Password»
-    - Нажать кнопку «Sign in»
-    - Нажать кнопку «Authorize vtm9»
-  expected-result: 
-    Пользователь должен попасть в лобби
+    - Press the "Sign up" button
+    - Click the "Sign in with Github" button
+    - Enter a value in the "Username or email address" field
+    - Enter a value in the "Password" field
+    - Press the "Sign in" button
+    - Press the "Authorize vtm9" button
+  expected result:
+    The user must enter the lobby
 
 
-- summary: 
-    Проверка авторизации на сайте через аккаунт на Discord
-  requirement: 
-    При авторизации на сайте через аккаунт на Discord пользователь попадает в лобби
-  prerequisites: 
-    ПК
+- summary:
+    Checking authorization on the site through a Discord account
+  requirement:
+    When authorizing on the site through a Discord account, the user enters the lobby
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-  test-data: 
-    Адрес электронной почты = v.mozaykin@gmail.com
-    Пароль = VMozaykin583
+  test-data:
+    Email = v.mozaykin@gmail.com
+    Password = VMozaykin583
   steps:
-    - Нажать кнопку «Sign up»
-    - Нажать кнопку «Sign in with Discord »
-    - Ввести значение в поле «Адрес электронной почты»
-    - Ввести значение в поле «Пароль»
-    - Нажать кнопку «Вход»
-    - Поставить галочку в чекбоксе капчи
-    - Нажать кнопку «Авторизовать»
-  expected-result: 
-    Пользователь должен попасть в лобби
+    - Press the "Sign up" button
+    - Press the button "Sign in with Discord»
+    - Enter a value in the "E-mail address" field
+    - Enter a value in the "Password" field
+    - Press the "Login" button
+    - Put a tick in the captcha checkbox
+    - Press the "Authorize" button
+  expected result:
+    The user must enter the lobby
 
 
-- summary: 
-    Проверка изменения имени профиля
-  requirement: 
-    При изменении имени профиля отображается новое имя
-  prerequisites: 
+- summary:
+    Checking profile name change
+  requirement:
+    When changing the profile name, the new name is displayed
+  prerequisites:
     iPad
     Safari
     codebattle.hexlet.io/settings
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
     Your name = mozaykin.v
   steps:
-    - Ввести значение в поле «Your name»
-    - Нажать кнопку «Save»
-    - Вернуться в лобби
-  expected-result: 
-    Отображено новое имя пользователя
+    - Enter a value in the "Your name" field
+    - Press the "Save" button
+    - Return to lobby
+  expected result:
+    New username displayed
 
 
-- summary: 
-    Проверка изменения имени профиля на имя, занятое другим пользователем
-  requirement: 
-    При попытке изменить имя профиля на имя, занятое другим пользователем, отображается сообщение, что имя уже занято
-  prerequisites: 
+- summary:
+    Checking if the profile name has been changed to a name taken by another user
+  requirement:
+    When trying to change the profile name to a name taken by another user, a message is displayed that the name is already taken
+  prerequisites:
     Nokia 5.4
     Microsoft Edge
     codebattle.hexlet.io/settings
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
-    Your name = VMozaykin
+    Your name = Vmozaykin
   steps:
-    - Ввести значение в поле «Your name»
-    - Нажать кнопку «Save»
-  expected-result: 
-    Отображено сообщение с текстом «this name has been taken»
+    - Enter a value in the "Your name" field
+    - Press the "Save" button
+  expected result:
+    A message is displayed with the text "this name has been taken"
 
 
-- summary: 
-    Проверка изменения основного языка программирования
-  requirement: 
-    При изменении языка программирования в настройках язык по умолчанию в играх меняется на ранее установленный
-  prerequisites: 
+- summary:
+    Checking for a change in the main programming language
+  requirement:
+    When you change the programming language in the settings, the default language in games changes to the previously set one
+  prerequisites:
     iPhone
     Safari
     codebattle.hexlet.io/settings
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Выбрать значение «Python» в поле «Your weapon»
-    - Нажать кнопку «Save»
-    - Вернуться в лобби
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Нажать кнопку «Create battle»
-  expected-result: 
-    В игре по умолчанию выбран язык «Python»
+    - Select the value "Python" in the field "Your weapon"
+    - Press the "Save" button
+    - Return to lobby
+    - Press the "Create a game" button
+    - Press the "With a bot" button
+    - Press the "Create battle" button
+  expected result:
+    The default language in the game is "Python"
 
 
-- summary: 
-    Проверка изменения громкости и звуков в системе оповещения
-  requirement: 
-    При изменении громкости и звуков в системе оповещения
-  prerequisites: 
-    ПК
+- summary:
+    Checking the change in volume and sounds in the notification system
+  requirement:
+    When changing the volume and sounds in the notification system
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io/settings
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
-    Solution =
+    solution=
     const _ = require("lodash");
     const R = require("rambda");
 
@@ -714,566 +714,565 @@
 
     module.exports = solution;
   steps:
-    - Выбрать значение «CS» в поле «Select sound type»
-    - Установить ползунок «Select sound level» на максимум 
-    - Нажать кнопку «Save»
-    - Вернуться в лобби
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With a bot»
-    - Выбрать значение «rect_area» в выпадающем меню «Choose task by name or tags»
-    - Нажать кнопку «Create battle»
-    - Вставить код в окно для решения
-    - Нажать кнопку «Check solution»
-  expected-result: 
-    Звучит выбранный звук на установленной громкости
+    - Select the value "CS" in the field "Select sound type"
+    - Set the "Select sound level" slider to maximum
+    - Press the "Save" button
+    - Return to lobby
+    - Press the "Create a game" button
+    - Press the "With a bot" button
+    - Select the value "rect_area" in the drop-down menu "Choose task by name or tags"
+    - Press the "Create battle" button
+    - Paste code into solution box
+    - Press the "Check solution" button
+  expected result:
+    The selected sound sounds at the set volume
 
 
-- summary: 
-    Проверка привязывания аккаунта на Github
-  requirement: 
-    При привязывании аккаунта на Github ссылка на него отображена на странице пользователя
-  prerequisites: 
-    ПК
+- summary:
+    Checking account linking on Github
+  requirement:
+    When linking an account on Github, the link to it is displayed on the user page
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io/settings
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
     Username = MozaykinV
-    Password = Qsefty489
+    Password=Qsefty489
   steps:
-    - Нажать кнопку «Link Github»
-    - Ввести значение в поле «Username or email address»
-    - Ввести значение в поле «Password»
-    - Нажать кнопку «Sign in»
-    - Нажать кнопку «Authorize vtm9»
-    - Нажать на имя пользователя
-    - Нажать кнопку «My profile»
-  expected-result: 
-    На странице пользователя указана ссылка на его аккаунт на Github
+    - Press the "Link Github" button
+    - Enter a value in the "Username or email address" field
+    - Enter a value in the "Password" field
+    - Press the "Sign in" button
+    - Press the "Authorize vtm9" button
+    - Click on the username
+    - Press the "My profile" button
+  expected result:
+    The user's page contains a link to his Github account.
 
-
-- summary: 
-    Проверка привязывания уже занятого аккаунта на Github
-  requirement: 
-    При привязывании уже занятого аккаунта на Github должно отображаться сообщение, что аккаунт уже используется
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+- summary:
+    Checking the linking of an already taken account on Github
+  requirement:
+    When linking an already taken account on Github, a message should be displayed that the account is already in use
+  prerequisites:
+    PC
+    Yandex browser
     codebattle.hexlet.io/settings
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
     Username = VMozaykin
     Password = v.mozaykin583
   steps:
-    - Нажать кнопку «Link Github»
-    - Ввести значение в поле «Username or email address»
-    - Ввести значение в поле «Password»
-    - Нажать кнопку «Sign in»
-    - Нажать кнопку «Authorize vtm9»
-  expected-result: 
-    Отображено сообщение с текстом «github_id has been taken»
+    - Press the "Link Github" button
+    - Enter a value in the "Username or email address" field
+    - Enter a value in the "Password" field
+    - Press the "Sign in" button
+    - Press the "Authorize vtm9" button
+  expected result:
+    Displayed message with text "github_id has been taken"
 
 
-- summary: 
-    Проверка отвязывания аккаунта на Github
-  requirement: 
-    При отвязывания аккаунта на Github ссылка на него перестает отображаться на странице пользователя
-  prerequisites: 
+- summary:
+    Github account unlink check
+  requirement:
+    When unlinking an account on Github, the link to it is no longer displayed on the user page
+  prerequisites:
     Nokia 5.4
     Google Chrome
     codebattle.hexlet.io/settings
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Unlink Github»
-    - Нажать на имя пользователя
-    - Нажать кнопку «My profile»
-  expected-result: 
-    На странице пользователя перестает отображаться ссылка на его аккаунт на Github
+    - Press the "Unlink Github" button
+    - Click on the username
+    - Press the "My profile" button
+  expected result:
+    The link to his Github account is no longer displayed on the user's page
 
 
-- summary: 
-    Проверка привязывания аккаунта на Discord
-  requirement: 
-    При привязывании аккаунта на Discord ссылка на него отображена на странице пользователя
-  prerequisites: 
-    ПК
+- summary:
+    Checking Discord Account Linking
+  requirement:
+    When linking an account on Discord, the link to it is displayed on the user page
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io/settings
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
-    Адрес электронной почты = v.mozaykin@gmail.com
-    Пароль = VMozaykin583
+    Email = v.mozaykin@gmail.com
+    Password = VMozaykin583
   steps:
-    - Нажать кнопку «Link Discord»
-    - Ввести значение в поле «Адрес электронной почты»
-    - Ввести значение в поле «Пароль»
-    - Нажать кнопку «Вход»
-    - Поставить галочку в чекбоксе капчи
-    - Нажать кнопку «Авторизовать»
-    - Нажать на имя пользователя
-    - Нажать кнопку «My profile»
-  expected-result: 
-    На странице пользователя указана ссылка на его аккаунт на Discord
+    - Press the "Link Discord" button
+    - Enter a value in the "E-mail address" field
+    - Enter a value in the "Password" field
+    - Press the "Login" button
+    - Put a tick in the captcha checkbox
+    - Press the "Authorize" button
+    - Click on the username
+    - Press the "My profile" button
+  expected result:
+    The user's page contains a link to his account on Discord
 
 
-- summary: 
-    Проверка возможности просмотра видео-записи игр пользователя
-  requirement: 
-    При нажатии кнопки «Show» воспроизводится видео-запись выбранной игры пользователя
-  prerequisites: 
-    ПК
+- summary:
+    Checking the ability to view video recordings of user games
+  requirement:
+    Clicking the "Show" button plays a video recording of the user's selected game
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать на имя пользователя «v.mozaykin»
-    - Нажать кнопку «My profile»
-    - Открыть вкладку «Completed games»
-    - Нажать любую кнопку «Show»
-    - Нажать кнопку «Play»
-  expected-result: 
-    Воспроизводится видео-запись выбранной игры
+    - Click on the username "v.mozaykin"
+    - Press the "My profile" button
+    - Open the "Completed games" tab
+    - Press any "Show" button
+    - Press the "Play" button
+  expected result:
+    The video recording of the selected game is played
 
 
-- summary: 
-    Проверка возможности просмотра видео-записи игр других пользователей
-  requirement: 
-    При нажатии кнопки «Show» воспроизводится видео-запись выбранной игры другого пользователя
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+- summary:
+    Checking the ability to view video recordings of games of other users
+  requirement:
+    Pressing the "Show" button plays a video recording of the selected game of another user
+  prerequisites:
+    PC
+    Yandex browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Открыть вкладку «Completed games»
-    - Нажать кнопку «Show» в игре, участником которой не является пользователь «v.mozaykin»
-    - Нажать кнопку «Play»
-  expected-result: 
-    Воспроизводится видео-запись выбранной игры
+    - Open the "Completed games" tab
+    - Press the "Show" button in a game that is not a member of the user "v.mozaykin"
+    - Press the "Play" button
+  expected result:
+    The video recording of the selected game is played
 
 
-- summary: 
-    Проверка невозможности редактировать код противника
-  requirement: 
-    Во время игры нельзя вносить изменения в код противника
-  prerequisites: 
-    ПК
+- summary:
+    Checking the impossibility to edit the opponent's code
+  requirement:
+    During the game you can not make changes to the code of the enemy
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With other users»
-    - Нажать кнопку «Create battle»
-    - Произвести попытку ввести любые символы в окне решения задачи противника
-  expected-result: 
-    Изменения в код противника не вносятся
+    - Press the "Create a game" button
+    - Click the "With other users" button
+    - Press the "Create battle" button
+    - Make an attempt to enter any characters in the opponent's task solution window
+  expected result:
+    Changes to the enemy code are not made
 
 
-- summary: 
-    Проверка невозможности копировать код противника
-  requirement: 
-    Во время игры нельзя копировать код противника
-  prerequisites: 
-    ПК
+- summary:
+    Checking the impossibility of copying the code of the enemy
+  requirement:
+    During the game you can not copy the code of the enemy
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With other users»
-    - Нажать кнопку «Create battle»
-    - Произвести попытку скопировать код из окна решения задачи противника
-  expected-result: 
-    Копирование кода противника не происходит
+    - Press the "Create a game" button
+    - Click the "With other users" button
+    - Press the "Create battle" button
+    - Make an attempt to copy the code from the window for solving the problem of the enemy
+  expected result:
+    Copying enemy code does not occur
 
 
-- summary: 
-    Проверка невозможности удалить код противника
-  requirement: 
-    Во время игры нельзя удалить код противника
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+- summary:
+    Checking the impossibility of deleting the enemy code
+  requirement:
+    During the game, you can not delete the code of the enemy
+  prerequisites:
+    PC
+    Yandex browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Create a game»
-    - Нажать кнопку «With other users»
-    - Нажать кнопку «Create battle»
-    - Произвести попытку удалить код из окна решения задачи противника
-  expected-result: 
-    Удаление кода противника не происходит
+    - Press the "Create a game" button
+    - Click the "With other users" button
+    - Press the "Create battle" button
+    - Make an attempt to remove the code from the window for solving the problem of the enemy
+  expected result:
+    Deleting the enemy code does not occur
 
 
-- summary: 
-    Проверка невозможности редактировать код игроков при просмотре трансляции
-  requirement: 
-    Пользователь, смотрящий трансляцию игры других пользователей, не может вносить изменения в код участников игры
-  prerequisites: 
-    ПК
+- summary:
+    Checking the impossibility to edit the code of the players while watching the broadcast
+  requirement:
+    A user watching the broadcast of the game of other users cannot make changes to the code of the participants in the game
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Show» в лобби
-    - Произвести попытку ввести любые символы в окнах решения задачи участников
-  expected-result: 
-    Изменения в код не вносятся
+    - Press the "Show" button in the lobby
+    - Make an attempt to enter any characters in the windows for solving the problem of the participants
+  expected result:
+    No code changes
 
 
-- summary: 
-    Проверка невозможности удалить код игроков при просмотре трансляции
-  requirement: 
-    Пользователь, смотрящий трансляцию игры других пользователей, не может удалять код участников игры
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+- summary:
+    Checking the impossibility of deleting the code of players while watching a broadcast
+  requirement:
+    A user watching the broadcast of the game of other users cannot delete the code of the participants in the game
+  prerequisites:
+    PC
+    Yandex browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать кнопку «Show» в лобби
-    - Произвести попытку удалить код в окнах решения задачи участников
-  expected-result: 
-    Удаление кода не происходит
+    - Press the "Show" button in the lobby
+    - Make an attempt to delete the code in the windows of the solution of the task of the participants
+  expected result:
+    Code removal does not work
 
 
 - summary: 
-    Проверка просмотра истории игр пользователя
-  requirement: 
-    При открытии вкладки «Completed games» на странице профиля отображена история игр пользователя
-  prerequisites: 
+    Checking User Game History View
+  requirement:
+    When opening the "Completed games" tab on the profile page, the user's game history is displayed
+  prerequisites:
     iPhone
-    Safari
+    safari
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать на имя пользователя «v.mozaykin»
-    - Нажать кнопку «My profile»
-    - Открыть вкладку «Completed games»
-  expected-result: 
-    Отображена история игр пользователя «v.mozaykin»
+    - Click on the username "v.mozaykin"
+    - Press the "My profile" button
+    - Open the "Completed games" tab
+  expected result:
+    The game history of the user "v.mozaykin" is displayed
 
 
 - summary: 
-    Проверка просмотра истории игр всех пользователя
-  requirement: 
-    При открытии вкладки «Completed games» на главной странице отображена история игр всех пользователей
-  prerequisites: 
+    Checking the Viewing Game History of All Users
+  requirement:
+    When you open the "Completed games" tab on the main page, the history of the games of all users is displayed
+  prerequisites:
     Nokia 5.4
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Открыть вкладку «Completed games»
-  expected-result: 
-    Отображена история игр всех пользователей 
+    - Open the "Completed games" tab
+  expected result:
+    Displayed game history of all users
 
 
 - summary: 
-    Проверка просмотра статистики побед, проигрышей и капитуляций пользователя
-  requirement: 
-    При переходе на страницу профиля отображена статистика побед, проигрышей и капитуляций пользователя
-  prerequisites: 
+    Checking the viewing of statistics of wins, losses and capitulations of the user
+  requirement:
+    When going to the profile page, the statistics of victories, losses and capitulations of the user are displayed
+  prerequisites:
     iPad
-    Яндекс.Браузер
+    Yandex browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать на имя пользователя «v.mozaykin»
-    - Нажать кнопку «My profile»
-  expected-result: 
-    Отображена статистика побед, проигрышей и капитуляций пользователя «v.mozaykin»
+    - Click on the username "v.mozaykin"
+    - Press the "My profile" button
+  expected result:
+    Displayed statistics of victories, losses and capitulations of the user "v.mozaykin"
 
 
 - summary: 
-    Проверка просмотра рейтинга игроков за все время
-  requirement: 
-    При переходе на вкладку «Total» на странице рейтинга отображен рейтинг участников за все время
-  prerequisites: 
+    All-Time Player Rating View Check
+  requirement:
+    When you go to the "Total" tab on the rating page, the rating of participants for all time is displayed
+  prerequisites:
     iPhone
-    Safari
+    safari
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать на имя пользователя «v.mozaykin»
-    - Нажать кнопку «Users rating»
-    - Открыть вкладку «Total»
-  expected-result: 
-    Отображен рейтинг участников за все время
+    - Click on the username "v.mozaykin"
+    - Press the "Users rating" button
+    - Open the "Total" tab
+  expected result:
+    The rating of participants for all time is displayed
 
 
 - summary: 
-    Проверка просмотра рейтинга игроков за месяц
-  requirement: 
-    При переходе на вкладку «Monthly» на странице рейтинга отображен рейтинг участников за месяц
-  prerequisites: 
+    Monthly Player Rating View Check
+  requirement:
+    When you go to the "Monthly" tab on the rating page, the rating of participants for the month is displayed
+  prerequisites:
     Nokia 5.4
     Microsoft Edge
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать на имя пользователя «v.mozaykin»
-    - Нажать кнопку «Users rating»
-    - Открыть вкладку «Monthly»
-  expected-result: 
-    Отображен рейтинг участников за месяц
+    - Click on the username "v.mozaykin"
+    - Press the "Users rating" button
+    - Open the "Monthly" tab
+  expected result:
+    The rating of participants for the month is displayed
 
 
 - summary: 
-    Проверка просмотра рейтинга игроков за неделю
-  requirement: 
-    При переходе на вкладку «Weekly» на странице рейтинга отображен рейтинг участников за неделю
-  prerequisites: 
+    Weekly Player Rating View Check
+  requirement:
+    When you go to the "Weekly" tab on the rating page, the rating of participants for the week is displayed
+  prerequisites:
     Nokia 5.4
-    Яндекс.Браузер
+    Yandex browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать на имя пользователя «v.mozaykin»
-    - Нажать кнопку «Users rating»
-    - Открыть вкладку «Weekly»
-  expected-result: 
-    Отображен рейтинг участников за неделю
+    - Click on the username "v.mozaykin"
+    - Press the "Users rating" button
+    - Open the "Weekly" tab
+  expected result:
+    Displayed the rating of participants for the week
 
 
 - summary: 
-    Проверка возможности просмотра видео-записи чемпионатов
-  requirement: 
-    При нажатии кнопки «Show» в разделе «Completed tournaments» пользователь может посмотреть видео-запись игр выбранного чемпионата 
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+    Checking the possibility of viewing the video recording of the championships
+  requirement:
+    By clicking the "Show" button in the "Completed tournaments" section, the user can watch a video recording of the games of the selected championship
+  prerequisites:
+    PC
+    Yandex browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Открыть вкладку «Tournaments»
-    - Нажать любую кнопку «Show» в разделе «Completed tournaments»
-    - Нажать любую кнопку «Show» в списке игр
-    - Нажать кнопку «Play»
-  expected-result: 
-    Воспроизводится видео-запись выбранной игры в чемпионате 
+    - Open the "Tournaments" tab
+    - Press any "Show" button in the "Completed tournaments" section
+    - Press any "Show" button in the game list
+    - Press the "Play" button
+  expected result:
+    The video recording of the selected championship game is played
 
 
 - summary: 
-    Проверка возможности просмотра трансляции чемпионата
-  requirement: 
-    При нажатии кнопки «Show» в разделе «Live tournaments» пользователь может посмотреть трансляцию игр выбранного чемпионата 
-  prerequisites: 
-    ПК
+    Checking the possibility of watching the broadcast of the championship
+  requirement:
+    By clicking the "Show" button in the "Live tournaments" section, the user can watch the broadcast of the games of the selected championship
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Открыть вкладку «Tournaments»
-    - Нажать любую кнопку «Show» в разделе «Live tournaments»
-    - Нажать любую кнопку «Show» в списке игр
-  expected-result: 
-    Воспроизводится трансляция выбранной игры в чемпионате 
+    - Open the "Tournaments" tab
+    - Press any "Show" button in the "Live tournaments" section
+    - Press any "Show" button in the game list
+  expected result:
+    The broadcast of the selected championship game is played
 
 
 - summary: 
-    Проверка возможности создания чемпионата
-  requirement: 
-    При заполнении формы «Create a new tournament» создается чемпионат
-  prerequisites: 
-    ПК
+    Checking the possibility of creating a championship
+  requirement:
+    When filling out the "Create a new tournament" form, a championship is created
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io/tournaments
-    Авторизация под пользователем «VMozaikovsky»
-  test-data: 
+    Authorization under the user "VMozaikovsky"
+  test-data:
     Email = yadsiro@gmail.com
     Password = Qsefty4$
     Name = Test 2
     Starts at (UTC) = 06/02/2023 23:52
-    Default language = Python
+    default language = Python
     Match timeout in seconds = 777
   steps:
-    - Нажать на имя пользователя «VMozaikovsky»
-    - Нажать кнопку «Tournaments»
-    - Ввести значение в поле «Name»
-    - Выбрать значение в поле «Starts at (UTC)»
-    - Выбрать значение в поле «Default language»
-    - Ввести значение в поле «Match timeout in seconds»
-    - Нажать кнопку «Create»
-  expected-result: 
-    Чемпионат создан 
+    - Click on the username "VMozaikovsky"
+    - Press the "Tournaments" button
+    - Enter a value in the "Name" field
+    - Select a value in the "Starts at (UTC)" field
+    - Select a value in the "Default language" field
+    - Enter a value in the "Match timeout in seconds" field
+    - Press the "Create" button
+  expected result:
+    Championship created
 
 
 - summary: 
-    Проверка возможности присоединиться к созданному собой чемпионату 
-  requirement: 
-    После создания чемпионата при нажатии кнопки «Join» пользователь становится участником своего чемпионата
-  prerequisites: 
-    ПК
+    Checking the ability to join the championship created by yourself
+  requirement:
+    After creating a championship, when you click the "Join" button, the user becomes a member of his championship
+  prerequisites:
+    PC
     Microsoft Edge
     codebattle.hexlet.io/tournaments
-    Авторизация под пользователем «VMozaikovsky»
-  test-data: 
+    Authorization under the user "VMozaikovsky"
+  test-data:
     Email = yadsiro@gmail.com
     Password = Qsefty4$
     Name = Test 2
     Starts at (UTC) = 06/02/2023 23:52
-    Default language = Python
+    default language = Python
     Match timeout in seconds = 777
   steps:
-    - Нажать на имя пользователя «VMozaikovsky»
-    - Нажать кнопку «Tournaments»
-    - Ввести значение в поле «Name»
-    - Выбрать значение в поле «Starts at (UTC)»
-    - Выбрать значение в поле «Default language»
-    - Ввести значение в поле «Match timeout in seconds»
-    - Нажать кнопку «Create»
-    - Нажать кнопку «Join»
-  expected-result: 
-    Пользователь, создавший чемпионат, присоединился к чемпионату  
+    - Click on the username "VMozaikovsky"
+    - Press the "Tournaments" button
+    - Enter a value in the "Name" field
+    - Select a value in the "Starts at (UTC)" field
+    - Select a value in the "Default language" field
+    - Enter a value in the "Match timeout in seconds" field
+    - Press the "Create" button
+    - Press the "Join" button
+  expected result:
+    The user who created the championship has joined the championship
 
 
 - summary: 
-    Проверка возможности присоединиться к чемпионату, созданному другим пользователем 
-  requirement: 
-    После создания чемпионата другие пользователи могут присоединиться к чемпионату
-  prerequisites: 
-    ПК
-    Яндекс.Браузер
+    Checking if you can join a championship created by another user
+  requirement:
+    After creating a championship, other users can join the championship
+  prerequisites:
+    PC
+    Yandex browser
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Открыть вкладку «Tournaments»
-    - Найти в разделе «Live tournaments» чемпионат «Test 2»
-    - Нажать кнопку «Show»
-    - Нажать кнопку «Join»
-  expected-result: 
-    Пользователь присоединился к чемпионату, созданному другим пользователем   
+    - Open the "Tournaments" tab
+    - Find the "Test 2" championship in the "Live tournaments" section
+    - Press the "Show" button
+    - Press the "Join" button
+  expected result:
+    User joined a championship created by another user
 
 
 - summary: 
-    Проверка возможности установки языка по умолчанию в чемпионате 
-  requirement: 
-    При выборе языка в настройках чемпионата в играх данного чемпионата языком по умолчанию будет являться выбранный ранее язык 
-  prerequisites: 
-    ПК
+    Checking the ability to set the default language in the championship
+  requirement:
+    When choosing a language in the championship settings in the games of this championship, the default language will be the previously selected language
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io/tournaments
-    Авторизация под пользователем «VMozaikovsky»
-  test-data: 
+    Authorization under the user "VMozaikovsky"
+  test-data:
     Email = yadsiro@gmail.com
     Password = Qsefty4$
     Name = Test 2
     Starts at (UTC) = 06/02/2023 23:52
-    Default language = Python
+    default language = Python
     Match timeout in seconds = 777
   steps:
-    - Нажать на имя пользователя «VMozaikovsky»
-    - Нажать кнопку «Tournaments»
-    - Ввести значение в поле «Name»
-    - Выбрать значение в поле «Starts at (UTC)»
-    - Выбрать значение в поле «Default language»
-    - Ввести значение в поле «Match timeout in seconds»
-    - Нажать кнопку «Create»
-    - Нажать кнопку «Join»
-    - Нажать кнопку «Promote»
-    - Нажать кнопку «Join»
-    - Нажать кнопку «Start»
-    - Нажать кнопку «Join»
-  expected-result: 
-    Языком по умолчанию в играх в рамках чемпионата отображается «Python»  
+    - Click on the username "VMozaikovsky"
+    - Press the "Tournaments" button
+    - Enter a value in the "Name" field
+    - Select a value in the "Starts at (UTC)" field
+    - Select a value in the "Default language" field
+    - Enter a value in the "Match timeout in seconds" field
+    - Press the "Create" button
+    - Press the "Join" button
+    - Press the "Promote" button
+    - Press the "Join" button
+    - Press the "Start" button
+    - Press the "Join" button
+  expected result:
+    The default language for championship games is "Python"
 
 
 - summary: 
-    Проверка системы отправки сообщений в чате в чемпионате участниками чемпионата 
-  requirement: 
-    После создания чемпионата участники чемпионата могут отправлять сообщения в чат чемпионата
-  prerequisites: 
+    Checking the system for sending messages in the chat in the championship by the participants of the championship
+  requirement:
+    After the championship is created, the participants of the championship can send messages to the championship chat
+  prerequisites:
     iPad
     Safari
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Открыть вкладку «Tournaments»
-    - Найти в разделе «Live tournaments» чемпионат «Test 2»
-    - Нажать кнопку «Show»
-    - Нажать кнопку «Join»
-    - Ввести текст «Hello, world!» в окне отправки сообщений
-    - Нажать кнопку «Send»
-  expected-result: 
-    Сообщение отображается в чате, окно отправки сообщений очищается
+    - Open the "Tournaments" tab
+    - Find the "Test 2" championship in the "Live tournaments" section
+    - Press the "Show" button
+    - Press the "Join" button
+    - Enter the text "Hello, world!" in the message box
+    - Press the "Send" button
+  expected result:
+    The message is displayed in the chat, the send message window is cleared
 
 
 - summary: 
-    Проверка возможности выйти из аккаунта
-  requirement: 
-    При нажатии кнопки «Sign out» осуществляется выход из аккаунта пользователя
-  prerequisites: 
-    ПК
+    Checking if you can sign out of your account
+  requirement:
+    Clicking the "Sign out" button logs you out of your user account
+  prerequisites:
+    PC
     Google Chrome
     codebattle.hexlet.io
-    Авторизация под пользователем «v.mozaykin»
-  test-data: 
+    Authorization under the user "v.mozaykin"
+  test-data:
     Email = v.mozaykin@gmail.com
     Password = VMozaykin583
   steps:
-    - Нажать на имя пользователя «v.mozaykin»
-    - Нажать кнопку « Sign out »
-  expected-result: 
-    Осуществляется выход из аккаунта пользователя «v.mozaykin», отображена главная страница
+    - Click on the username "v.mozaykin"
+    - Press the "Sign out" button
+  expected result:
+    The user account "v.mozaykin" is logged out, the main page is displayed
