@@ -1,279 +1,278 @@
-- summary: 
-    Проверка работы таймера
+- summary:
+    Checking the timer
   status: pass
 
 
-- summary: 
-    Проверка выбора уровня сложности заданий
+- summary:
+    Checking the choice of task difficulty level
   status: pass
 
 
-- summary: 
-    Проверка выбора задачи для решения
+- summary:
+    Checking the choice of problem for solution
   status: pass
 
 
-- summary: 
-    Проверка изменения языка задачи в игре
+- summary:
+    Checking the change of task language in the game
   status: pass
 
 
-- summary: 
-    Проверка оповещения об истечении времени на выполнение задания
+- summary:
+    Checking Job Time Out Alert
   status: fail
 
 
-- summary: 
-    Проверка выбора задачи для решения при игре с другом
+- summary:
+    Checking the choice of problem to solve when playing with a friend
   status: fail
 
 
-- summary: 
-    Проверка изменения языка в игре с ботом
+- summary:
+    Checking the language change in the game with a bot
   status: pass
 
 
-- summary: 
-    Проверка возможности соревноваться с ботом
+- summary:
+    Checking the ability to compete with the bot
   status: pass
 
 
-- summary: 
-    Проверка возможности соревноваться с другим пользователем
+- summary:
+    Checking the ability to compete with another user
   status: pass
   
 
-- summary: 
-    Проверка возможности подключиться к игре, созданной другим пользователем
+- summary:
+    Checking the ability to connect to a game created by another user
   status: pass
 
 
-- summary: 
-    Проверка приглашения друга в игру
+- summary:
+    Checking a friend's invitation to the game
   status: pass
 
 
-- summary: 
-    Проверка подключения к игре по приглашению друга
+- summary:
+    Checking the connection to the game on the invitation of a friend
   status: pass
 
 
-- summary: 
-    Проверка возможности отклонить приглашение пользователя вступить в игру
+- summary:
+    Checking the ability to decline the user's invitation to join the game
   status: pass
 
 
-- summary: 
-    Проверка получения отклонения приглашения вступить в игру пользователем
+- summary:
+    Checking if a user has received a rejection of an invitation to join a game
   status: fail
 
 
-- summary: 
-    Проверка возможности наблюдения за написанием кода противником
+- summary:
+    Checking the possibility of observing the writing of code by the enemy
   status: pass
 
 
-- summary: 
-    Проверка возможности сдаться в игре
+- summary:
+    Checking if you can surrender in a game
   status: pass
 
 
-- summary: 
-    Проверка возможности сбросить решение в игре
+- summary:
+    Checking the ability to reset the decision in the game
   status: pass
 
 
-- summary: 
-    Проверка системы авто-тестов при правильном решении в игре
+- summary:
+    Checking the system of auto-tests with the correct decision in the game
   status: pass
 
 
-- summary: 
-    Проверка системы авто-тестов при неправильном решении в игре
+- summary:
+    Checking the system of auto-tests in case of a wrong decision in the game
   status: pass
 
 
-- summary: 
-    Проверка получения очков в случае победы
+- summary:
+    Checking for points in case of victory
   status: pass
 
 
-- summary: 
-    Проверка возможности наблюдения за игрой других пользователей
+- summary:
+    Checking the ability to observe the game of other users
   status: pass
 
 
-- summary: 
-    Проверка возможности у наблюдателя игры отправлять сообщения в чате 
+- summary:
+    Checking the ability of the game observer to send messages in the chat
   status: pass
 
 
-- summary: 
-    Проверка возможности у участника игры отправлять сообщения в чате 
+- summary:
+    Checking the ability of a game participant to send messages in a chat
   status: pass
 
 
-- summary: 
-    Проверка регистрации на сайте с помощью электронной почты
+- summary:
+    Checking registration on the site using e-mail
   status: pass
 
 
-- summary: 
-    Проверка регистрации на сайте с помощью неверной электронной почты
+- summary:
+    Checking registration on the site using the wrong email
   status: fail
 
 
-- summary: 
-    Проверка авторизации на сайте через аккаунт на Github
+- summary:
+    Checking authorization on the site through an account on Github
   status: pass
 
 
-- summary: 
-    Проверка авторизации на сайте через аккаунт на Discord
+- summary:
+    Checking authorization on the site through a Discord account
   status: fail
 
 
-- summary: 
-    Проверка изменения имени профиля
+- summary:
+    Checking profile name change
   status: pass
 
 
-- summary: 
-    Проверка изменения имени профиля на имя, занятое другим пользователем
+- summary:
+    Checking if the profile name has been changed to a name taken by another user
   status: fail
 
 
-- summary: 
-    Проверка изменения основного языка программирования
+- summary:
+    Checking for a change in the main programming language
   status: pass
 
 
-- summary: 
-    Проверка изменения громкости и звуков в системе оповещения
+- summary:
+    Checking the change in volume and sounds in the notification system
   status: pass
 
 
-- summary: 
-    Проверка привязывания аккаунта на Github
+- summary:
+    Checking account linking on Github
   status: pass
 
 
-- summary: 
-    Проверка привязывания уже занятого аккаунта на Github
+- summary:
+    Checking the linking of an already taken account on Github
   status: pass
 
 
-- summary: 
-    Проверка отвязывания аккаунта на Github
+- summary:
+    Github account unlink check
   status: fail
 
 
-- summary: 
-    Проверка привязывания аккаунта на Discord
+- summary:
+    Checking Discord Account Linking
   status: fail
 
 
-- summary: 
-    Проверка возможности просмотра видео-записи игр пользователя
+- summary:
+    Checking the ability to view video recordings of user games
   status: fail
 
 
-- summary: 
-    Проверка возможности просмотра видео-записи игр других пользователей
+- summary:
+    Checking the ability to view video recordings of games of other users
   status: pass
 
 
-- summary: 
-    Проверка невозможности редактировать код противника
+- summary:
+    Checking the impossibility to edit the opponent's code
   status: pass
 
 
-- summary: 
-    Проверка невозможности копировать код противника
+- summary:
+    Checking the impossibility of copying the code of the enemy
   status: pass
 
 
-- summary: 
-    Проверка невозможности удалить код противника
+- summary:
+    Checking the impossibility of deleting the enemy code
   status: pass
 
 
-- summary: 
-    Проверка невозможности редактировать код игроков при просмотре трансляции
+- summary:
+    Checking the impossibility to edit the code of the players while watching the broadcast
   status: pass
 
 
-- summary: 
-    Проверка невозможности удалить код игроков при просмотре трансляции
+- summary:
+    Checking the impossibility of deleting the code of players while watching a broadcast
   status: pass
 
 
-- summary: 
-    Проверка просмотра истории игр пользователя
+- summary:
+    Checking User Game History View
   status: pass
 
 
-- summary: 
-    Проверка просмотра истории игр всех пользователя
+- summary:
+    Checking the Viewing Game History of All Users
   status: pass
 
 
-- summary: 
-    Проверка просмотра статистики побед, проигрышей и капитуляций пользователя
+- summary:
+    Checking the viewing of statistics of wins, losses and capitulations of the user
   status: pass
 
 
-- summary: 
-    Проверка просмотра рейтинга игроков за все время
+- summary:
+    All-Time Player Rating View Check
   status: pass
 
 
-- summary: 
-    Проверка просмотра рейтинга игроков за месяц
+- summary:
+    Monthly Player Rating View Check
   status: pass
 
 
-- summary: 
-    Проверка просмотра рейтинга игроков за неделю
+- summary:
+    Weekly Player Rating View Check
   status: pass
 
 
-- summary: 
-    Проверка возможности просмотра видео-записи чемпионатов
+- summary:
+    Checking the possibility of viewing the video recording of the championships
   status: pass
 
 
-- summary: 
-    Проверка возможности просмотра трансляции чемпионата
+- summary:
+    Checking the possibility of watching the broadcast of the championship
   status: pass
 
 
-- summary: 
-    Проверка возможности создания чемпионата
+- summary:
+    Checking the possibility of creating a championship
   status: pass
 
 
-- summary: 
-    Проверка возможности присоединиться к созданному собой чемпионату 
+- summary:
+    Checking the ability to join the championship created by yourself
   status: pass
 
 
-- summary: 
-    Проверка возможности присоединиться к чемпионату, созданному другим пользователем 
+- summary:
+    Checking if you can join a championship created by another user
   status: pass
 
 
-- summary: 
-    Проверка возможности установки языка по умолчанию в чемпионате 
+- summary:
+    Checking the ability to set the default language in the championship
   status: fail
 
 
-- summary: 
-    Проверка системы отправки сообщений в чате в чемпионате участниками чемпионата 
+- summary:
+    Checking the system for sending messages in the chat in the championship by the participants of the championship
   status: fail
 
 
-- summary: 
-    Проверка возможности выйти из аккаунта
+- summary:
+    Checking if you can sign out of your account
   status: pass
-
