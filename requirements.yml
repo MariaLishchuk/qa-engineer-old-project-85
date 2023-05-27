@@ -1,32 +1,32 @@
 functional:
-  - Пользователь должен иметь возможность соревноваться в написании кода на разных языках по заданным условиям на скорость.
-  - Пользователь должен иметь возможность соревноваться с другим пользователем или ботом путем создания игры.
-  - Пользователь должен иметь возможность приглашать друга присоединиться к игре.
-  - Пользователь должен иметь возможность видеть написание кода противником.
-  - Пользователь должен иметь возможность сдаться, сбросить решение и проверить решение.
-  - Пользователь должен получать очки рейтинга после завершения игры с другим пользователем или другом в случае победы.
-  - Пользователь должен иметь возможность просматривать рейтинг игроков за неделю, месяц и все время.
-  - Пользователь должен иметь возможность выбирать уровень сложности игры.
-  - Пользователь должен иметь возможность менять язык заданий с английского на русский и с русского на английский.
-  - Пользователь, не участвующий в игре, должен иметь возможность следить за ходом игры.
-  - Пользователи, участвующие в игре и наблюдающие за ней, должны иметь возможность отправлять сообщения в чате.
-  - Пользователь должен иметь возможность просматривать видео-запись своих игр и игр других пользователей.
+  - The user should be able to compete in writing code in different languages according to the given conditions for speed.
+  - The user must be able to compete with another user or bot by creating a game.
+  - The user should be able to invite a friend to join the game.
+  - The user should be able to see the writing of the code by the enemy.
+  - The user should be able to give up, reset the solution and check the solution.
+  - The user should receive rating points after completing the game with another user or friend in case of victory.
+  - The user should be able to view the rating of players for the week, month and all time.
+  - The user should be able to choose the difficulty level of the game.
+  - The user should be able to change the language of tasks from English to Russian and from Russian to English.
+  - A user not participating in the game should be able to follow the progress of the game.
+  - Users participating in the game and watching it should be able to send messages in the chat.
+  - The user must be able to view the video recording of their games and games of other users.
 
 non-functional:
-  - Сайт должен быть разработан с учетом удобства использования и оптимизирован для скорости работы.
-  - Сайт должен быть безопасным и защищать данные пользователя.
-  - Сайт должен быть удобным на мобильном устройстве.
-  - Сайт должен быть протестирован на совместимость с последними версиями браузеров.
-  - Сайт должен быть способен обрабатывать большое количество трафика (1000 одновременных пользователей). 
+  - The site should be designed with usability in mind and optimized for speed.
+  - The site must be secure and protect user data.
+  - The site should be convenient on a mobile device.
+  - The site must be tested for compatibility with the latest versions of browsers.
+  - The site must be able to handle a large amount of traffic (1000 concurrent users).
 
 implicit:
-  - Для доступа к функционалу сайта пользователь должен зарегистрироваться или авторизоваться через Github или Discord.
-  - Пользователь не должен иметь возможность редактировать, копировать и удалять код противника.
-  - Пользователь должен иметь возможность просматривать историю своих игр, а также игр других пользователей сайта.
-  - Пользователь должен иметь возможность просматривать статистику своих побед, проигрышей и капитуляций.
-  - Пользователь должен иметь возможность менять настройки профиля, в т.ч. имя, язык программирования, звуки и громкость.
-  - Пользователь должен иметь возможность привязывать к аккаунту аккаунты на Github или Discord, а также отвязывать их.
-  - Пользователь должен иметь возможность создавать чемпионаты и участвовать в них.
-  - Пользователь должен иметь возможность просматривать видео-запись чемпионатов.
+  - To access the functionality of the site, the user must register or log in through Github or Discord.
+  - The user should not be able to edit, copy and delete the opponent's code.
+  - The user must be able to view the history of his games, as well as the games of other users of the site.
+  - The user should be able to view the statistics of their wins, losses and capitulations.
+  - The user should be able to change the profile settings, incl. name, programming language, sounds and volume.
+  - The user must be able to link accounts on Github or Discord to the account, as well as untie them.
+  - The user should be able to create championships and participate in them.
+  - The user should be able to view the video recording of the championships.
   
    
